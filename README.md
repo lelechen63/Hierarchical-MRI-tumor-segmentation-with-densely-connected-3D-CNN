@@ -1,6 +1,6 @@
 # Hierarchical MRI tumor segmentation with densely connected 3D CNN
 
-By Lele Chen, Yue Wu, [Adora M. DSouza](https://www.rochester.edu/college/gradstudies/profiles/adora-dsouza.html),Anas Z. Abidin, [Axel W. E. Wismuelle](https://www.urmc.rochester.edu/people/27063859-axel-w-e-wismueller), [Chenliang Xu](https://www.cs.rochester.edu/~cxu22/).
+By Lele Chen, Yue Wu, [Adora M. DSouza](https://www.rochester.edu/college/gradstudies/profiles/adora-dsouza.html), Anas Z. Abidin, [Axel W. E. Wismuelle](https://www.urmc.rochester.edu/people/27063859-axel-w-e-wismueller), [Chenliang Xu](https://www.cs.rochester.edu/~cxu22/).
 
 University of Rochester.
 
@@ -45,7 +45,7 @@ If you use these models or the ideas in your research, please cite:
 ### Running
 
 
-0. Pre-installation:[Tensorflow](https://www.tensorflow.org/install/),[Ants](https://github.com/ANTsX/ANTs),[nibabel](http://nipy.org/nibabel/),[sklearn](http://scikit-learn.org/stable/),[numpy](http://www.numpy.org/)
+0. Pre-installation:[Tensorflow](https://www.tensorflow.org/install/), [Ants](https://github.com/ANTsX/ANTs), [nibabel](http://nipy.org/nibabel/), [sklearn](http://scikit-learn.org/stable/), [numpy](http://www.numpy.org/)
 
 0. Download and unzip the training data from [BTRAS2017](http://braintumorsegmentation.org/)
 
@@ -54,7 +54,7 @@ If you use these models or the ideas in your research, please cite:
 	- `-gpu`: gpu id
 	- `-bs`: batch size 
 	- `-mn`: model name, 'dense24' or 'dense48' or 'no-dense' or 'dense24_nocorrection'
-	- `-nc`:  [n4ITK bias correction](https://www.ncbi.nlm.nih.gov/pubmed/20378467),True or False
+	- `-nc`: [n4ITK bias correction](https://www.ncbi.nlm.nih.gov/pubmed/20378467),True or False
 	- `-e`: epoch number 
 	- `-r`: data path
 	- `-sp`: save path/name
@@ -67,7 +67,7 @@ For example:
 	- `-gpu`: gpu id
 	- `-m`: model path, the saved model name
 	- `-mn`: model name, 'dense24' or 'dense48' or 'no-dense' or 'dense24_nocorrection'
-	- `-nc`:  [n4ITK bias correction](https://www.ncbi.nlm.nih.gov/pubmed/20378467), True or False
+	- `-nc`: [n4ITK bias correction](https://www.ncbi.nlm.nih.gov/pubmed/20378467), True or False
 	- `-r`: data path
 	- ...
 
@@ -87,16 +87,16 @@ For example:
 
 ### Disclaimer and known issues
 
-0. These codes are implmented in Tensorflow
+0. These codes are implemented in Tensorflow
 0. In this paper, we only use the glioblastoma (HGG) dataset.
-0. I didn't config nipype.interfaces.ants.segmentation. So if you need to use `n4correction.py` code, you need to copy it to the bin directory where antsRegistration etc are located. Then run `python n4correction.py`
+0. I didn't config nipype.interfaces.ants.segmentation. So if you need to use `n4correction.py` code, you need to copy it to the `bin` directory where antsRegistration etc are located. Then run `python n4correction.py`
 0. If you want to train these models using this version of tensorflow without modifications, please notice that:
-	- You need at lest 12 GB GPU memory.
+	- You need at least 12 GB GPU memory.
 	- There might be some other untested issues.
 	
 
 ### Results
-0. Result visualization :
+0. Result visualization:
 	![visualization](https://github.com/lelechen63/MRI-tumor-segmentation-Brats/blob/master/image/h.png)
 	![visualization](https://github.com/lelechen63/MRI-tumor-segmentation-Brats/blob/master/image/v.png)
 
