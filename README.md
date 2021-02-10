@@ -87,7 +87,7 @@ For example:
 
 ### Disclaimer and known issues
 
-0. These codes are implmented in Tensorflow
+0. These codes are implemented in Tensorflow
 0. In this paper, we only use the glioblastoma (HGG) dataset.
 0. I didn't config nipype.interfaces.ants.segmentation. So if you need to use `n4correction.py` code, you need to copy it to the bin directory where antsRegistration etc are located. Then run `python n4correction.py`
 0. If you want to train these models using this version of tensorflow without modifications, please notice that:
@@ -105,6 +105,6 @@ For example:
 	model|whole|peritumoral edema (ED)|FGD-enhan. tumor (ET)
 	:---:|:---:|:---:|:---:
 	Dense24 |0.74| 0.81| 0.80
-	Dense48 | 0.61|0.78|0.79
+	Dense48 |0.61|0.78|0.79
 	no-dense|0.61|0.77|0.78
 	dense24+n4correction|0.72|0.83|0.81
